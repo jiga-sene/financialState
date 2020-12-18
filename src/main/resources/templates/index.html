@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title th:text="${application.title}">Financial</title>
+<link th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet">
+<link th:href="@{/assets/customize/css/navbar-top-fixed.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/customize/css/dashboard.css}" rel="stylesheet">
+<link th:href="@{/assets/customize/css/table.css}" rel="stylesheet">
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+</head>
+<body>
+	<nav th:replace="fragment/header :: header"></nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav th:replace="fragment/sidebar :: sidebar"></nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+				<form
+					th:action="@{/financial/__${stateType?.code}__/__${stateType?.uuid}__}"
+					method="post" th:object="${state}" id="frm_state">
+					<input type="hidden" id="customerID" th:name="customerID"
+						th:value="${customerID}">
+					<div
+						class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+						<h1 class="h2 text-break" th:text="${stateType?.label}">BILAN
+							ACTIF</h1>
+						<div class="btn-toolbar mb-2 mb-md-0" th:if="${state}">
+							<div class="btn-group mr-2">
+								<button type="button" class="btn btn-sm btn-outline-secondary"
+									id="btn-edition">Editer</button>
+								<button type="submit" class="btn btn-sm btn-outline-success"
+									id="btn-save">Enregistrer</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary"
+									id="btn-export">Exporter</button>
+							</div>
+							<button type="button"
+								class="btn btn-sm btn-outline-secondary dropdown-toggle">
+								<span data-feather="calendar"></span> Autres exercices
+							</button>
+						</div>
+					</div>
+					<div id="myTable" th:if="${state}">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th class="dataH" rowspan="2"></th>
+									<th class="dataH" rowspan="2">Note</th>
+									<th class="dataH" th:colspan="${state.resources}"
+										th:each="year : ${years}"
+										th:text="${'Exercice au 31/12/' + year}">Exercice au
+										31/12/N</th>
+								</tr>
+								<tr>
+									<span th:each="year, stat : ${years}">
+										<th class="dataH text-center"
+										th:each="resource : ${state?.resourceValues}"
+										th:text="${resource}">Emplois</th>
+									</span>
+								</tr>
+							</thead>
+							<tbody>
+								<span th:each="posteGroup, statePG : *{posteGroups}">
+									<tr th:each="poste , statePO : ${posteGroup.postes}">
+										<td class="data" th:text="${poste.label}">Trésorerie
+											actif N-1</td>
+										<td class="text-center data" th:text="${poste.note}"
+											th:id="${statePG.index+'_'+statePO.index+'_note'}"
+											contenteditable="false"><input type="hidden"
+											th:field="${poste.label + '_note'}"
+											th:name="${statePG.index+'_'+statePO.index+'_'+'note'}" /></td>
+										<span th:each="year, stat : ${years}">
+											<td class="text-center data"
+											th:each="resource, indice : ${state.resourceValues}"
+											th:id="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
+											th:text="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}"
+											contenteditable="false"><input type="hidden"
+												th:name="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
+												th:field="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}" /></td>
+										</span>
+									</tr>
+									<tr class="text-light"
+										th:classappend="${posteGroup?.postes != null && #lists.size(posteGroup?.postes) > 0 ? 'bg-info' : 'bg-secondary'}">
+										<td class="dataH" th:text="${posteGroup.label}">Trésorerie
+											au 1er janvier</td>
+										<td class="text-center dataH" th:text="${posteGroup.index}">A</td>
+										<span th:each="year, stat : ${years}">
+											<td class="dataH text-center"
+											th:each="resource, indice : ${state.resourceValues}"
+											th:text="${posteGroup?.values[__${resource+year}__]}"></td>
+										</span>
+									</tr>
+								</span>
+							</tbody>
+						</table>
+					</div>
+				</form>
+			</main>
+		</div>
+	</div>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.js}"></script>
+	<script th:src="@{/assets/customize/js/dashboard.js}"></script>
+	<script th:src="@{/assets/customize/js/table.js}"></script>
+	<script th:src="@{/assets/customize/js/jquery-1.10.2.js}"></script>
+	<script th:src="@{/assets/customize/js/financial.action.js}"></script>
+</body>
+</html>

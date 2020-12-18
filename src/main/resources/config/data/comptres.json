@@ -1,0 +1,307 @@
+{
+	"year": "",
+	"month": "",
+	"resources": 1,
+	"resourceValues": [
+		"Net"
+	],
+	"posteGroups": [
+		{
+			"label": "MARGE BRUTE",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Ventes de marchandises",
+					"note": "",
+					"index": "A",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Achats de marchandises",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": " - Variation de stocks",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)",
+			"note": "",
+			"index": "",
+			"order": 2,
+			"postes": [
+				{
+					"label": "Ventes de produits fabriqués",
+					"note": "",
+					"index": "B",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Travaux, services vendus",
+					"note": "",
+					"index": "C",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Production stockée (ou déstockage)",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Production immobilisée",
+					"note": "",
+					"index": "C",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Produits accessoires",
+					"note": "",
+					"index": "D",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Subventions d'exploitation",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Autres produits",
+					"note": "",
+					"index": "",
+					"order": 7,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "VALEUR AJOUTEE",
+			"note": "",
+			"index": "",
+			"order": 3,
+			"postes": [
+				{
+					"label": "Achats de matières premières et fournitures liées",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": " - Variation de stocks",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Autres achats",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": " - Variation de stocks",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Transports",
+					"note": "",
+					"index": "D",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Services extérieurs",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Impôts et taxes",
+					"note": "",
+					"index": "",
+					"order": 7,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Autres charges",
+					"note": "",
+					"index": "",
+					"order": 8,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "EXCEDENT BRUT D'EXPLOITATION",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Charges de personnel",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "RESULTAT D'EXPLOITATION",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Reprises de provisions",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Transferts de charges",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Dotations aux amortissements et aux provisions",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "RESULTAT FINANCIER",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Revenus financiers et produits assimilés",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Frais financiers et charges assimilées",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "RESULTAT AVANT PRELEVEMENT",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": []
+		},
+		{
+			"label": "RESULTAT NET",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Participations des travailleurs",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Impôt sur le résultat",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		}
+	]
+}

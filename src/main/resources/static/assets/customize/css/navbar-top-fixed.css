@@ -1,0 +1,57 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  font-size: .675rem;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.nav-link-header{
+	color: #f8f9fa !important;
+}
+
+.bg-jira{
+	background-color: #0747a6;
+}
+
+.aui-header{
+	background-color: #0747a6;
+	color: #deebff;
+	border-bottom-color: #2e3d54;
+}
+
+.search-input{
+	border-top-right-radius: 0rem !important;
+	border-bottom-right-radius: 0rem !important;
+}
+.search-btn{
+	border-top-left-radius: 0rem !important;
+	border-bottom-left-radius: 0rem !important;
+	border-left : -1;
+	z-index: -1;
+}
+
+.aui-profile{
+	height: 32px;
+	width: 32px;
+	max-height: 32px;
+	max-width: 32px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.aui-profile img{
+	display: block;
+	margin: auto;
+	width: 100%;
+	border: 0;
+}
+
+.aui-sidebar{
+	margin: 0;
+	top: 0;
+	overflow-y:auto;
+}

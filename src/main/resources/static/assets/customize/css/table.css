@@ -1,0 +1,35 @@
+#mytable {
+	margin: 0 auto;
+	width: 60%;
+	position: relative;
+}
+
+.glyphicon {
+	font-size: 20px;
+}
+
+.add-row {
+	color: #32CD32;
+}
+
+.add-row:hover {
+	color: #228B22;
+}
+
+.delete-row {
+	color: #FF0000;
+}
+
+.delete-row:hover {
+	color: #B22222;
+}
+.dataH{
+	padding-left: 10px!important;
+	padding-bottom: 6px!important;
+	padding-right: 0px!important;
+	padding-top: 6px!important;
+}
+.data{
+	padding-bottom: 4px!important;
+	padding-top: 4px!important;
+}

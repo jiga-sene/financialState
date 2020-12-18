@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title th:text="${application.title}">Financial</title>
+<link th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet">
+<link th:href="@{/assets/customize/css/navbar-top-fixed.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/customize/css/dashboard.css}" rel="stylesheet">
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+</head>
+<body>
+	<nav th:replace="fragment/header :: header"></nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav th:replace="fragment/sidebar :: sidebar"></nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+			<div
+				class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+				<h1 class="h2 text-break" th:text="${title}">Compte de Résultat</h1>
+				<div class="btn-toolbar mb-2 mb-md-0">
+					<div class="btn-group mr-2">
+						<button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
+					</div>
+					<button type="button"
+						class="btn btn-sm btn-outline-secondary dropdown-toggle">
+						<span data-feather="calendar"></span> Autres exercices
+					</button>
+				</div>
+			</div>
+			<div id="myTable">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="dataH" rowspan="2"></th>
+							<th class="dataH" rowspan="2">Note</th>
+							<th class="dataH">Exercice au 31/12/N</th>
+							<th class="dataH">Exercice au 31/12/N-1</th>
+							<th class="dataH">Exercice au 31/12/N-2</th>
+						</tr>
+						<tr>
+							<th class="dataH text-center">NET</th>
+							<th class="dataH text-center">NET</th>
+							<th class="dataH text-center">NET</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- MARGE BRUTE -->
+						<tr>
+							<td class="data">Ventes de marchandises</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Achats de marchandises</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data"> - Variation de stocks</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">MARGE BRUTE</td>
+							<td class="text-center dataH">A</td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  CHIFFRES D'AFFAIRES -->
+						<tr>
+							<td class="data">Ventes de produits fabriqués</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Travaux, services vendus</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Production stockée (ou déstockage)</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Production immobilisée</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Produits accessoires</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Subventions d'exploitation</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Autres produits</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">CHIFFRE D'AFFAIRES (A+B+C+D)</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  VALEUR AJOUTEE -->
+						<tr>
+							<td class="data">Achats de matières premières et fournitures liées</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data"> - Variation de stocks</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Autres achats</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">- Variations de stocks</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Transports</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Services extérieurs</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Impôts et taxes</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Autres charges</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">VALEUR AJOUTEE</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  EXCEDENT BRUT D'EXPLOITATION -->
+						<tr>
+							<td class="data">Charges de personnel</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">EXCEDENT BRUT D'EXPLOITATION</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+						
+						<!--  RESULTAT D'EXPLOITATION -->
+						<tr>
+							<td class="data">Revenus financiers & produits assimilées</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Frais financiers & charges assimilées</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">RESULTAT FINANCIER</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  RESULTAT AVANT PRELEVEMENT -->
+						<tr class="bg-info text-light">
+							<td class="dataH">RESULTAT AVANT PRELEVEMENT</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+						
+						<!--  RESULTAT NET -->
+						<tr>
+							<td class="data">Participation des travailleurs</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Impôts sur le résultat</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-secondary text-light">
+							<td class="dataH">RESULTAT NET</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</main>
+		</div>
+	</div>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.js}"></script>
+	<script th:src="@{/assets/customize/js/dashboard.js}"></script>
+</body>
+</html>

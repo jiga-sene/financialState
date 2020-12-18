@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<nav th:fragment="sidebar"
+	class="col-md-3 col-lg-2 d-md-block mt-3 bg-light sidebar collapse">
+	<div class="sidebar-sticky pt-3">
+
+		<h6
+			class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-2 text-muted font-light">
+			<span>ETATS FINANCIERS</span>
+		</h6>
+		<ul class="nav flex-column" th:each="stateType : ${statesType}">
+			<li class="nav-item"><a class="nav-link text-monospace"
+				th:classappend="${#strings.contains(#httpServletRequest.requestURI, #strings.toLowerCase(stateType?.code))? 'active' : ''}"
+				th:href="@{${'/financial/' + #strings.toLowerCase(stateType?.code) + '/000'}}" th:text="${stateType?.label}">BILAN ACTIF</a></li>
+		</ul>
+
+		<h6
+			class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			<span>RATIOS</span>
+		</h6>
+		<ul class="nav flex-column mb-2">
+			<li class="nav-item"><a class="nav-link text-monospace" href="#">RATIOS</a>
+			</li>
+		</ul>
+	</div>
+</nav>

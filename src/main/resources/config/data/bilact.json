@@ -1,0 +1,238 @@
+{
+	"year": "",
+	"month": "",
+	"resources": 3,
+	"resourceValues": [
+		"Brut",
+		"Am_Pr",
+		"Net"
+	],
+	"posteGroups": [
+		{
+			"label": "TOTAL ACTIF IMMOBILISE",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "IMMOBILISATIONS INCORPORELLES",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Brut": 0,
+						"Amort/Prov": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "ets, Licences",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Brut": 0,
+						"Amort/Prov": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "Logiciels",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Brut": 0,
+						"Amort/Prov": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "IMMOBILISATIONS CORPORELLES",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Batiments",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Installations et aménagements",
+					"note": "",
+					"index": "",
+					"order": 7,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Matériel et Outillage",
+					"note": "",
+					"index": "",
+					"order": 8,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Matériel, Mobilier de bureau",
+					"note": "",
+					"index": "",
+					"order": 9,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Matériel informatique",
+					"note": "",
+					"index": "",
+					"order": 10,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Immobilisations corporelles en cours",
+					"note": "",
+					"index": "",
+					"order": 11,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Créances et acomptes",
+					"note": "",
+					"index": "",
+					"order": 12,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "IMMOBILISATIONS FINANCIERES",
+					"note": "",
+					"index": "",
+					"order": 13,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL ACTIF CIRCULANT",
+			"note": "",
+			"index": "",
+			"order": 3,
+			"postes": [
+				{
+					"label": "STOCK ET ENCOURS",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "CREANCES ET EMPLOIS ASSIMILES",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL TRESORERIE ACTIF",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "TRESORERIE",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL GENERAL",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes":[]
+		}
+	]
+}

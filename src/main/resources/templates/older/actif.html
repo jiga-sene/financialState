@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title th:text="${application.title}">Financial</title>
+		<link th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet">
+		<link th:href="@{/assets/customize/css/navbar-top-fixed.css}" rel="stylesheet">
+		<link th:href="@{/assets/customize/css/dashboard.css}" rel="stylesheet">
+	    <style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+				  font-size: 3.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav th:replace="fragment/header :: header"></nav>
+		<div class="container-fluid">
+			<div class="row">
+				<nav th:replace="fragment/sidebar :: sidebar"></nav>
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+			        <h1 class="h2 text-break" th:text="${title}">BILAN ACTIF</h1>
+			        <div class="btn-toolbar mb-2 mb-md-0">
+			          <div class="btn-group mr-2">
+			            <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+			            <button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
+			          </div>
+			          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+			            <span data-feather="calendar"></span>
+			            Autres exercices
+			          </button>
+			        </div>
+			      </div>
+			      
+			<div id="myTable">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="dataH" rowspan="2"></th>
+							<th class="dataH" rowspan="2">Note</th>
+							<th class="dataH" colspan="3">Exercice au 31/12/N</th>
+							<th class="dataH" colspan="3">Exercice au 31/12/N-1</th>
+							<th class="dataH" colspan="3">Exercice au 31/12/N-2</th>
+						</tr>
+						<tr>
+							<th class="dataH">Brut</th>
+							<th class="dataH">Amort/Prov</th>
+							<th class="dataH">Net</th>
+							<th class="dataH">Brut</th>
+							<th class="dataH">Amort/Prov</th>
+							<th class="dataH">Net</th>
+							<th class="dataH">Brut</th>
+							<th class="dataH">Amort/Prov</th>
+							<th class="dataH">Net</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- TOTAL ACTIF IMMOBILISE -->
+						<tr>
+							<td class="data">Trésorerie actif N-1</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Trésorerie Passif N-1</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL ACTIF IMMOBILISE</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+						
+						<!--  TOTAL ACTIIF CIRCULANT -->
+						<tr>
+							<td class="data">Capacité d'Autofinancement Global</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Variation des stocks</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Variation des créances & emplois assimilés</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Variation du passif circulant</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL ACTIF CIRCULANT</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+						
+						<!-- TOTAL TRESORERIE CIRCULANT -->
+						<tr>
+							<td class="data">Acquisitions / cessions d'immobilisations incorporelles</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Acquisitions / cessions d'immobilisations corporelles</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Acquisitions / cessions d'immobilisations financières</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL TRESORERIE ACTIF</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+						
+						<!-- TOTAL GENERAL -->
+						<tr class="bg-secondary text-light">
+							<td class="dataH">TOTAL GENERAL</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>	
+						</tr>
+					</tbody>
+				</table>
+			</div>
+				</main>
+			 </div>
+		</div>
+		<script th:src="@{/assets/bootstrap/js/bootstrap.bundle.js}"></script>
+		<script th:src="@{/assets/bootstrap/js/bootstrap.js}"></script>
+		<script th:src="@{/assets/customize/js/dashboard.js}"></script>
+	</body>
+</html>
+	

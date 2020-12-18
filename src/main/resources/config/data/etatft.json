@@ -1,0 +1,222 @@
+{
+	"year": "",
+	"month": "",
+	"resources": 2,
+	"resourceValues": [
+		"Emplois",
+		"Ressources"
+	],
+	"posteGroups": [
+		{
+			"label": "Trésorerie au 1er janvier",
+			"note": "",
+			"index": "A",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Trésorerie actif N-1",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Trésorerie passif N-1",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "Trésorerie provenant de l'exploitation",
+			"note": "",
+			"index": "B",
+			"order": 2,
+			"postes": [
+				{
+					"label": "Capacité d'Autofinancement Global",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Variation des stocks",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Variation des créances et emplois assimilés",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Variation du passif circulant",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "Trésorerie provenant des investissements",
+			"note": "",
+			"index": "C",
+			"order": 3,
+			"postes": [
+				{
+					"label": "Acquisitions / Cessions d'immobilisations Incorporelles",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Acquisitions / Cessions d'immobilisations corporelles",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Acquisitions / Cessions d'immobilisations financières",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "Trésorerie provenant des capitaux propres",
+			"note": "",
+			"index": "D",
+			"order": 4,
+			"postes": [
+				{
+					"label": "Augmentations de capital par apports nouveaux",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Prélèvements sur le capital",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Distributions de dividendes",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "Trésorerie provenant des capitaux étrangers",
+			"note": "",
+			"index": "E",
+			"order": 5,
+			"postes": [
+				{
+					"label": "Emprunts et autres dettes financières",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Remboursements des emprunts et autres dettes financières",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				},
+				{
+					"label": "Subventions d'investissements",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Emplois": 0,
+						"Ressources": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "Variation de trésorerie de l'exercice (F = B+C+D+E)",
+			"note": "",
+			"index": "F",
+			"order": 6,
+			"postes": []
+		},
+		{
+			"label": "Trésorerie au 31 décembre (G = B+C+D+E)",
+			"note": "",
+			"index": "G",
+			"order": 7,
+			"postes": []
+		},
+		{
+			"label": "Trésorerie actif N - Trésorerie passif N",
+			"note": "",
+			"index": "",
+			"order": 8,
+			"postes": []
+		}
+	]
+}

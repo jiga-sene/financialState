@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title th:text="${application.title}">Financial</title>
+<link th:href="@{/assets/bootstrap/css/bootstrap.css}" rel="stylesheet">
+<link th:href="@{/assets/customize/css/navbar-top-fixed.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/customize/css/dashboard.css}" rel="stylesheet">
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+</head>
+<body>
+	<nav th:replace="fragment/header :: header"></nav>
+	<div class="container-fluid">
+		<div class="row">
+			<nav th:replace="fragment/sidebar :: sidebar"></nav>
+			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+			<div
+				class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+				<h1 class="h2 text-break" th:text="${title}">BILAN PASSIF</h1>
+				<div class="btn-toolbar mb-2 mb-md-0">
+					<div class="btn-group mr-2">
+						<button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
+					</div>
+					<button type="button"
+						class="btn btn-sm btn-outline-secondary dropdown-toggle">
+						<span data-feather="calendar"></span> Autres exercices
+					</button>
+				</div>
+			</div>
+			<div id="myTable">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th class="dataH" rowspan="2"></th>
+							<th class="dataH" rowspan="2">Note</th>
+							<th class="dataH">Exercice au 31/12/N</th>
+							<th class="dataH">Exercice au 31/12/N-1</th>
+							<th class="dataH">Exercice au 31/12/N-2</th>
+						</tr>
+						<tr>
+							<th class="dataH text-center">NET</th>
+							<th class="dataH text-center">NET</th>
+							<th class="dataH text-center">NET</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- TOTAL CAPITAUX PROPRES & RESSOURCES ASSIMILEES -->
+						<tr>
+							<td class="data">Capital</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Actionnaires capital non appelé</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Primes d'apport d'émission de fusion</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Ecarts de réévaluation</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Réserves indisponibles</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Réserves libres</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Report à nouveau</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Résultat en instance d'affectation</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Résultat net de l'exercice</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Provisions réglementées</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  TOTAL DETTES FINANCIERES & RESSOURCES ASSIMILEES -->
+						<tr>
+							<td class="data">Subventions d'investissement</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Emprunts et dettes financières</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Dettes de crédit-bail et contrats assimilés</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Provisions financières pour risques et charges</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL DETTES FINANCIERES & RESSOURCES ASSIMILEES</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  TOTAL PASSIF CIRCULANT -->
+						<tr>
+							<td class="data">Clients, avances reçues</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Fournisseurs d'exploitation</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Dettes fiscales et sociales</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Autres dettes</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Risques provisionnels</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL PASSIF CIRCULANT</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  TOTAL TRESORERIE PASSIF -->
+						<tr>
+							<td class="data">Banques, crédits d'escompte</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr>
+							<td class="data">Banques, crédits de trésorerie et découvert</td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+							<td class="text-center data" contenteditable="true"></td>
+						</tr>
+						<tr class="bg-info text-light">
+							<td class="dataH">TOTAL TRESORERIE PASSIF</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+
+						<!--  TOTAL GENERAL -->
+						<tr class="bg-secondary text-light">
+							<td class="dataH">TOTAL GENERAL</td>
+							<td class="text-center dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+							<td class="dataH"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</main>
+		</div>
+	</div>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.bundle.js}"></script>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.js}"></script>
+	<script th:src="@{/assets/customize/js/dashboard.js}"></script>
+</body>
+</html>

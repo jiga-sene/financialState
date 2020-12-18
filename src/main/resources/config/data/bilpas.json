@@ -1,0 +1,247 @@
+{
+	"year": "",
+	"month": "",
+	"resources": 1,
+	"resourceValues": [
+		"Net"
+	],
+	"posteGroups": [
+		{
+			"label": "TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Capital",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Actionnaires capital non appelé",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Primes d'apport d'émission, de fusion",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Ecarts de réévaluation",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Réserves indisponibles",
+					"note": "",
+					"index": "",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Réserves libres",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Report à nouveau",
+					"note": "",
+					"index": "",
+					"order": 7,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Résultat en instance d'affectation",
+					"note": "",
+					"index": "",
+					"order": 8,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Résultat net de l'exercice",
+					"note": "",
+					"index": "",
+					"order": 9,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Provisions réglementées",
+					"note": "",
+					"index": "",
+					"order": 10,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL DETTES FINANCIERES ET RESSOURCES ASSIMILEES",
+			"note": "",
+			"index": "",
+			"order": 2,
+			"postes": [
+				{
+					"label": "Subventions d'investissement",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Emprunts et dettes financières",
+					"note": "",
+					"index": "C",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Dettes de crédit-bail et contrats assimilés",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Provisions financières pour risques et charges",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL PASSIF CIRCULANT",
+			"note": "",
+			"index": "",
+			"order": 3,
+			"postes": [
+				{
+					"label": "Clients, avances reçues",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Fournisseurs d'exploitation",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Dettes fiscales et sociales",
+					"note": "",
+					"index": "",
+					"order": 3,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Autres dettes",
+					"note": "",
+					"index": "",
+					"order": 4,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Transports",
+					"note": "",
+					"index": "D",
+					"order": 5,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Risques provisionnés",
+					"note": "",
+					"index": "",
+					"order": 6,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL TRESORERIE PASSIF",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes": [
+				{
+					"label": "Banques, crédits d'escompte",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Net": 0
+					}
+				},
+				{
+					"label": "Banques, crédits de trésorerie et découvert",
+					"note": "",
+					"index": "",
+					"order": 2,
+					"values": {
+						"Net": 0
+					}
+				}
+			]
+		},
+		{
+			"label": "TOTAL GENERAL",
+			"note": "",
+			"index": "",
+			"order": 1,
+			"postes":[]
+		}
+	]
+}
