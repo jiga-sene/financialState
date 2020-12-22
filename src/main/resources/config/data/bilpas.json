@@ -1,8 +1,10 @@
 {
 	"year": "",
 	"month": "",
-	"resources": 1,
+	"resources": 3,
 	"resourceValues": [
+		"Brut",
+		"Am_Pr",
 		"Net"
 	],
 	"posteGroups": [
@@ -11,13 +13,22 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values":{
+				"Brut": 0,
+				"Am_Pr": 0,
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Capital",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -26,7 +37,10 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -35,7 +49,10 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -45,6 +62,8 @@
 					"index": "",
 					"order": 4,
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -54,6 +73,8 @@
 					"index": "",
 					"order": 5,
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -62,7 +83,10 @@
 					"note": "",
 					"index": "",
 					"order": 6,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -71,7 +95,10 @@
 					"note": "",
 					"index": "",
 					"order": 7,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -80,7 +107,10 @@
 					"note": "",
 					"index": "",
 					"order": 8,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -89,7 +119,10 @@
 					"note": "",
 					"index": "",
 					"order": 9,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -98,7 +131,10 @@
 					"note": "",
 					"index": "",
 					"order": 10,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				}
@@ -109,13 +145,22 @@
 			"note": "",
 			"index": "",
 			"order": 2,
+			"formule": "",
+			"values" : {
+				"Brut": 0,
+				"Am_Pr": 0,
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Subventions d'investissement",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -124,7 +169,10 @@
 					"note": "",
 					"index": "C",
 					"order": 2,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -133,7 +181,10 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -142,7 +193,10 @@
 					"note": "",
 					"index": "",
 					"order": 4,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				}
@@ -153,13 +207,22 @@
 			"note": "",
 			"index": "",
 			"order": 3,
+			"formule": "",
+			"values": {
+				"Brut": 0,
+				"Am_Pr": 0,
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Clients, avances reçues",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -168,7 +231,10 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -177,7 +243,10 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -186,7 +255,10 @@
 					"note": "",
 					"index": "",
 					"order": 4,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -195,7 +267,10 @@
 					"note": "",
 					"index": "D",
 					"order": 5,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -204,7 +279,10 @@
 					"note": "",
 					"index": "",
 					"order": 6,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				}
@@ -215,13 +293,22 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values":{
+				"Brut": 0,
+				"Am_Pr": 0,
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Banques, crédits d'escompte",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				},
@@ -230,7 +317,10 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "",
 					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
 						"Net": 0
 					}
 				}
@@ -241,6 +331,12 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values":{
+				"Brut": 0,
+				"Am_Pr": 0,
+				"Net": 0
+			},
 			"postes":[]
 		}
 	]

@@ -11,12 +11,17 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Ventes de marchandises",
 					"note": "",
 					"index": "A",
 					"order": 1,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -26,6 +31,7 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -35,6 +41,7 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -46,12 +53,17 @@
 			"note": "",
 			"index": "",
 			"order": 2,
+			"formule": "A + B + C + D",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Ventes de produits fabriqués",
 					"note": "",
 					"index": "B",
 					"order": 1,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -61,6 +73,7 @@
 					"note": "",
 					"index": "C",
 					"order": 2,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -70,6 +83,7 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -79,6 +93,7 @@
 					"note": "",
 					"index": "C",
 					"order": 4,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -88,6 +103,7 @@
 					"note": "",
 					"index": "D",
 					"order": 5,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -97,6 +113,7 @@
 					"note": "",
 					"index": "",
 					"order": 6,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -106,6 +123,7 @@
 					"note": "",
 					"index": "",
 					"order": 7,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -117,12 +135,17 @@
 			"note": "",
 			"index": "",
 			"order": 3,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Achats de matières premières et fournitures liées",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -132,6 +155,7 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -141,6 +165,7 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -150,6 +175,7 @@
 					"note": "",
 					"index": "",
 					"order": 4,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -159,6 +185,7 @@
 					"note": "",
 					"index": "D",
 					"order": 5,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -168,6 +195,7 @@
 					"note": "",
 					"index": "",
 					"order": 6,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -177,6 +205,7 @@
 					"note": "",
 					"index": "",
 					"order": 7,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -186,6 +215,7 @@
 					"note": "",
 					"index": "",
 					"order": 8,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -197,12 +227,17 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Charges de personnel",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -214,12 +249,17 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Reprises de provisions",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -229,6 +269,7 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -238,6 +279,7 @@
 					"note": "",
 					"index": "",
 					"order": 3,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -249,12 +291,17 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Revenus financiers et produits assimilés",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "+",
 					"values": {
 						"Net": 0
 					}
@@ -264,6 +311,7 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -275,6 +323,10 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": []
 		},
 		{
@@ -282,12 +334,17 @@
 			"note": "",
 			"index": "",
 			"order": 1,
+			"formule": "",
+			"values": {
+				"Net": 0
+			},
 			"postes": [
 				{
 					"label": "Participations des travailleurs",
 					"note": "",
 					"index": "",
 					"order": 1,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}
@@ -297,6 +354,7 @@
 					"note": "",
 					"index": "",
 					"order": 2,
+					"signe": "-",
 					"values": {
 						"Net": 0
 					}

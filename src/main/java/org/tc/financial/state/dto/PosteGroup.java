@@ -26,6 +26,8 @@ public class PosteGroup implements Serializable{
 	
 	private int order;
 	
+	private String formule;
+	
 	@NonNull
 	private List<Poste> postes;
 	

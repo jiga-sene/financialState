@@ -60,7 +60,8 @@ public class StateService {
 						years.forEach(year -> {
 							state.getResourceValues().forEach(resource -> {
 								poste.setNote("");
-								poste.getValues().put(indexPG + " _ " + indexPO + " _ " + resource + " _ " + year, null);
+								poste.getValues().put(indexPG + " _ " + indexPO + " _ " + resource + " _ " + year,
+										null);
 							});
 						});
 					});
@@ -81,7 +82,7 @@ public class StateService {
 
 		List<String> years = this.getYearsInValues(values);
 		Customer customer = customerService.getCustomerAndSaveIfNotExist(customerID);
-		
+
 		Map<String, org.tc.financial.state.domain.State> statesToSave = new HashMap<>(3);
 		years.forEach(year -> {
 			statesToSave.putIfAbsent(year, new org.tc.financial.state.domain.State(year, "", customerID, "", customer,
@@ -89,6 +90,7 @@ public class StateService {
 		});
 
 		Gson gson = new Gson();
+		List<Integer> containsFormuleIndex = new ArrayList<>();
 
 		for (Map.Entry<String, org.tc.financial.state.domain.State> stateToSave : statesToSave.entrySet()) {
 			State stateDTOTMP = stateDTO;
@@ -101,15 +103,47 @@ public class StateService {
 					poste.setNote(String.valueOf(values.getOrDefault(iStatePG + "_" + iStatePO + "_note", "")));
 					stateDTOTMP.getResourceValues().forEach(resource -> {
 						String key = iStatePG + "_" + iStatePO + "_" + resource + "_" + stateToSave.getKey();
-						poste.getValues().put(resource, Propriete.tryParseInt(String.valueOf(values.getOrDefault(key, ""))));
+						final int value = Propriete.tryParseInt(String.valueOf(values.getOrDefault(key, "")));
+						poste.getValues().put(resource, value);
+
+						// Calculation of the subtotal or total
+						if (posteGroup.getFormule().trim().isEmpty()) {
+							final int valueToAdd = poste.getSigne().trim().equals("-") ? -value : value;
+							posteGroup.getValues().put(resource,
+									Integer.sum(posteGroup.getValues().get(resource), valueToAdd));
+						} else
+							containsFormuleIndex.add(iStatePG);
 					});
 				}
 			}
+			stateDTOTMP = formulaCalculation(stateDTOTMP, containsFormuleIndex);
 			stateToSave.getValue().setData(gson.toJson(stateDTOTMP));
 		}
 		saveFinancialStates(statesToSave);
-
 		return statesToSave;
+	}
+
+	private State formulaCalculation(State stateDTO, List<Integer> containsFormuleIndex) {
+
+		// Formula Calculation
+		containsFormuleIndex.forEach(statePG -> {
+			String formule = stateDTO.getPosteGroups().get(statePG).getFormule();
+			stateDTO.getResourceValues().forEach(resource -> {
+				stateDTO.getPosteGroups().forEach(posteGroup -> {
+					if (formule.contains(posteGroup.getIndex()))
+						stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
+								Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
+										posteGroup.getValues().get(resource)));
+					posteGroup.getPostes().forEach(poste -> {
+						if (formule.contains(poste.getIndex()))
+							stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
+									Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
+											poste.getValues().get(resource)));
+					});
+				});
+			});
+		});
+		return stateDTO;
 	}
 
 	private Map<String, org.tc.financial.state.domain.State> saveFinancialStates(

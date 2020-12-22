@@ -26,6 +26,8 @@ public class Poste implements Serializable{
 	
 	private int order;
 	
+	private String signe;
+	
 	@NonNull
 	private Map<String, Integer> values; 
 	

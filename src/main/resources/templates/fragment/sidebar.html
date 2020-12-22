@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<nav th:fragment="sidebar"
+<nav th:fragment="sidebar(customerID)"
 	class="col-md-3 col-lg-2 d-md-block mt-3 bg-light sidebar collapse">
 	<div class="sidebar-sticky pt-3">
 
@@ -10,7 +10,7 @@
 		<ul class="nav flex-column" th:each="stateType : ${statesType}">
 			<li class="nav-item"><a class="nav-link text-monospace"
 				th:classappend="${#strings.contains(#httpServletRequest.requestURI, #strings.toLowerCase(stateType?.code))? 'active' : ''}"
-				th:href="@{${'/financial/' + #strings.toLowerCase(stateType?.code) + '/000'}}" th:text="${stateType?.label}">BILAN ACTIF</a></li>
+				th:href="@{${'/financial/' + #strings.toLowerCase(stateType?.code) + '/' + customerID}}" th:text="${stateType?.label}">BILAN ACTIF</a></li>
 		</ul>
 
 		<h6
