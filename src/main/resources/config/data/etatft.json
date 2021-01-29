@@ -250,11 +250,11 @@
 			}
 		},
 		{
-			"label": "Trésorerie au 31 décembre (G = B+C+D+E)",
+			"label": "Trésorerie au 31 décembre (G = A+B+C+D+E)",
 			"note": "",
 			"index": "G",
 			"order": 7,
-			"formule": "E + F",
+			"formule": "A + F",
 			"postes": [],
 			"values": {
 				"Emplois": 0,

@@ -1,3 +1,7 @@
+function replaceFinancial(html){
+	$('tbody#financial').replaceWith($(html));
+}
+
 $("#btn-save").hide();
 
 $("#btn-edition").click(function() {
@@ -38,6 +42,7 @@ $("form#frm_state").submit(function(event) {
 	    contentType: 'application/json',
 	    data: serialized,
 	    success: function( data, textStatus, jQxhr ){
+			replaceFinancial(data);
 	        console.log( textStatus );
 	    },
 	    error: function( jqXhr, textStatus, errorThrown ){

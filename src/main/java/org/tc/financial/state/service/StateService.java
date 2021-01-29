@@ -85,12 +85,11 @@ public class StateService {
 
 		Map<String, org.tc.financial.state.domain.State> statesToSave = new HashMap<>(3);
 		years.forEach(year -> {
-			statesToSave.putIfAbsent(year, new org.tc.financial.state.domain.State(year, "", customerID, "", customer,
+			statesToSave.putIfAbsent(year, new org.tc.financial.state.domain.State(year, "", "admin", "", customer,
 					stateTypeService.getStateType(stateType.getUuid())));
 		});
 
 		Gson gson = new Gson();
-		List<Integer> containsFormuleIndex = new ArrayList<>();
 
 		for (Map.Entry<String, org.tc.financial.state.domain.State> stateToSave : statesToSave.entrySet()) {
 			State stateDTOTMP = stateDTO;
@@ -103,43 +102,74 @@ public class StateService {
 					poste.setNote(String.valueOf(values.getOrDefault(iStatePG + "_" + iStatePO + "_note", "")));
 					stateDTOTMP.getResourceValues().forEach(resource -> {
 						String key = iStatePG + "_" + iStatePO + "_" + resource + "_" + stateToSave.getKey();
-						final int value = Propriete.tryParseInt(String.valueOf(values.getOrDefault(key, "")));
+						Integer valueTMP = Propriete.tryParseInt(String.valueOf(values.getOrDefault(key, "")));
+						final int value = valueTMP == null ? 0 : valueTMP;
 						poste.getValues().put(resource, value);
-
-						// Calculation of the subtotal or total
-						if (posteGroup.getFormule().trim().isEmpty()) {
-							final int valueToAdd = poste.getSigne().trim().equals("-") ? -value : value;
-							posteGroup.getValues().put(resource,
-									Integer.sum(posteGroup.getValues().get(resource), valueToAdd));
-						} else
-							containsFormuleIndex.add(iStatePG);
 					});
 				}
 			}
-			stateDTOTMP = formulaCalculation(stateDTOTMP, containsFormuleIndex);
+
+			stateDTOTMP = subTotalCalculation(stateDTOTMP);
 			stateToSave.getValue().setData(gson.toJson(stateDTOTMP));
+			// break;
 		}
 		saveFinancialStates(statesToSave);
 		return statesToSave;
 	}
 
+	private State subTotalCalculation(State stateDTO) {
+
+		stateDTO.getPosteGroups().forEach(posteGroup -> {
+			stateDTO.getResourceValues().forEach(resource -> {
+				posteGroup.getValues().put(resource, 0);
+			});
+		});
+
+		List<Integer> containsFormuleIndex = new ArrayList<>();
+
+		for (int statePG = 0; statePG < stateDTO.getPosteGroups().size(); statePG++) {
+			final int iStatePG = statePG;
+			if (stateDTO.getPosteGroups().get(statePG).getFormule().trim().isEmpty())
+				stateDTO.getPosteGroups().get(statePG).getPostes().forEach(poste -> {
+					stateDTO.getResourceValues().forEach(resource -> {
+						final int valueToAdd = (poste.getSigne() != null && poste.getSigne().trim().equals("-"))
+								? -poste.getValues().get(resource)
+								: poste.getValues().get(resource);
+						stateDTO.getPosteGroups().get(iStatePG).getValues().put(resource, Integer
+								.sum(stateDTO.getPosteGroups().get(iStatePG).getValues().get(resource), valueToAdd));
+					});
+				});
+			else
+				containsFormuleIndex.add(statePG);
+		}
+		return formulaCalculation(stateDTO, containsFormuleIndex);
+	}
+
 	private State formulaCalculation(State stateDTO, List<Integer> containsFormuleIndex) {
+
+		// Reset all PosteGroups values
+		containsFormuleIndex.forEach(statePG -> {
+			stateDTO.getResourceValues().forEach(resource -> {
+				stateDTO.getPosteGroups().get(statePG).getValues().put(resource, 0);
+			});
+		});
 
 		// Formula Calculation
 		containsFormuleIndex.forEach(statePG -> {
 			String formule = stateDTO.getPosteGroups().get(statePG).getFormule();
 			stateDTO.getResourceValues().forEach(resource -> {
 				stateDTO.getPosteGroups().forEach(posteGroup -> {
-					if (formule.contains(posteGroup.getIndex()))
+					if (!posteGroup.getIndex().isEmpty() && formule.contains(posteGroup.getIndex())) {
 						stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
 								Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
 										posteGroup.getValues().get(resource)));
-					posteGroup.getPostes().forEach(poste -> {
-						if (formule.contains(poste.getIndex()))
-							stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
-									Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
-											poste.getValues().get(resource)));
-					});
+						posteGroup.getPostes().forEach(poste -> {
+							if (!poste.getIndex().isEmpty() && formule.contains(poste.getIndex()))
+								stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
+										Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
+												poste.getValues().get(resource)));
+						});
+					}
 				});
 			});
 		});
@@ -157,11 +187,11 @@ public class StateService {
 					.findAllByYearAndMonthAndCustomerCodeAndStateTypeCode(stateToSave.getYear(), stateToSave.getMonth(),
 							stateToSave.getCustomer().getCode(), stateToSave.getStateType().getCode());
 
-			if (states == null || states.size() < 1)
+			if (states == null || states.size() < 1) {
 				stateRepository.save(stateToSave);
-			else {
-				stateRepository.save(stateToSave);
-				stateToSave.setUuid(states.get(0).getUuid());
+			} else {
+				states.get(0).setData(stateToSave.getData());
+				stateRepository.save(states.get(0));
 			}
 		});
 		return statesToSave;
@@ -178,23 +208,48 @@ public class StateService {
 		Gson gson = new Gson();
 		states.forEach(st -> {
 			State stateDTO = gson.fromJson(st.getData(), State.class);
-			for (int statePG = 0; statePG < stateDTO.getPosteGroups().size(); statePG++) {
-				PosteGroup posteGroup = stateDTO.getPosteGroups().get(statePG);
-				final int iStatePG = statePG;
-				for (int statePO = 0; statePO < posteGroup.getPostes().size(); statePO++) {
-					Poste poste = posteGroup.getPostes().get(statePO);
-					final int iStatePO = statePO;
-					state.getPosteGroups().get(statePG).getPostes().get(statePO)
-							.setNote(stateDTO.getPosteGroups().get(statePG).getPostes().get(statePO).getNote());
-					poste.getValues().forEach((resource, value) -> {
-						state.getPosteGroups().get(iStatePG).getPostes().get(iStatePO).getValues()
-								.put(iStatePG + "_" + iStatePO + "_" + resource + "_" + st.getYear(), value);
+			if (stateDTO != null) {
+				for (int statePG = 0; statePG < stateDTO.getPosteGroups().size(); statePG++) {
+					PosteGroup posteGroup = stateDTO.getPosteGroups().get(statePG);
+					final int iStatePG = statePG;
+					for (int statePO = 0; statePO < posteGroup.getPostes().size(); statePO++) {
+						Poste poste = posteGroup.getPostes().get(statePO);
+						final int iStatePO = statePO;
+						state.getPosteGroups().get(statePG).getPostes().get(statePO)
+								.setNote(stateDTO.getPosteGroups().get(statePG).getPostes().get(statePO).getNote());
+						poste.getValues().forEach((resource, value) -> {
+							state.getPosteGroups().get(iStatePG).getPostes().get(iStatePO).getValues()
+									.put(iStatePG + "_" + iStatePO + "_" + resource + "_" + st.getYear(), value);
+						});
+					}
+					state.getResourceValues().forEach(resource -> {
+						state.getPosteGroups().get(iStatePG).getValues().put(resource + "_" + st.getYear(),
+								posteGroup.getValues().get(resource));
 					});
 				}
 			}
 		});
 
 		return state;
+	}
+
+	public List<String> getAllFinancialStateAddedByCustomer(String customerCode) {
+
+		if (customerCode == null || customerCode.trim().isEmpty())
+			return null;
+
+		List<org.tc.financial.state.domain.State> states = stateRepository
+				.findAllByCustomerCodeAndYearInOrderByYearDesc(customerCode, Propriete.getThreeLastYears());
+
+		if (states == null || states.size() < 1)
+			return null;
+
+		final List<String> financialStates = new ArrayList<String>();
+		states.forEach(state -> {
+			if (!financialStates.contains(state.getStateType().getCode()))
+				financialStates.add(state.getStateType().getCode());
+		});
+		return financialStates;
 	}
 
 	private List<org.tc.financial.state.domain.State> getStatesOfCustomer(String customerCode, String stateTypeCode,

@@ -12,7 +12,7 @@
 	<artifactId>financial-state</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FinancialState</name>
+	<name>Financial</name>
 	<description>Financial State and Ratios</description>
 
 	<properties>
