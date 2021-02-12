@@ -34,7 +34,7 @@
 			<nav th:replace="fragment/sidebar :: sidebar(${customerID})"></nav>
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
 				<form
-					th:action="@{/financial/__${stateType?.code}__/__${stateType?.uuid}__}"
+					th:action="@{/state/__${stateType?.code}__/__${stateType?.uuid}__}"
 					method="post" th:object="${state}" id="frm_state">
 					<input type="hidden" id="customerID" th:name="customerID"
 						th:value="${customerID}">
@@ -84,11 +84,10 @@
 			</main>
 		</div>
 	</div>
+	<script th:src="@{/assets/customize/js/jquery-1.10.2.js}"></script>
 	<script th:src="@{/assets/bootstrap/js/bootstrap.bundle.js}"></script>
 	<script th:src="@{/assets/bootstrap/js/bootstrap.js}"></script>
-	<script th:src="@{/assets/customize/js/dashboard.js}"></script>
 	<script th:src="@{/assets/customize/js/table.js}"></script>
-	<script th:src="@{/assets/customize/js/jquery-1.10.2.js}"></script>
 	<script th:src="@{/assets/customize/js/financial.action.js}"></script>
 </body>
 </html>

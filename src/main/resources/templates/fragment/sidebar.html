@@ -10,7 +10,7 @@
 		<ul class="nav flex-column" th:each="stateType : ${statesType}">
 			<li class="nav-item"><a class="nav-link text-monospace"
 				th:classappend="${#strings.contains(#httpServletRequest.requestURI, #strings.toLowerCase(stateType?.code))? 'active' : ''}"
-				th:href="@{${'/financial/' + #strings.toLowerCase(stateType?.code) + '/' + customerID}}" th:text="${stateType?.label}">BILAN ACTIF</a></li>
+				th:href="@{${'/state/' + #strings.toLowerCase(stateType?.code) + '/' + customerID}}" th:text="${stateType?.label}">BILAN ACTIF</a></li>
 		</ul>
 
 		<h6
@@ -18,7 +18,7 @@
 			<span>RATIOS</span>
 		</h6>
 		<ul class="nav flex-column mb-2">
-			<li class="nav-item"><a class="nav-link text-monospace" href="#">RATIOS</a>
+			<li class="nav-item"><a class="nav-link text-monospace" th:href="@{${'/state/ratios/'+customerID}}">RATIOS</a>
 			</li>
 		</ul>
 	</div>

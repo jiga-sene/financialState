@@ -11,7 +11,7 @@
 		{
 			"label": "TOTAL ACTIF IMMOBILISE",
 			"note": "",
-			"index": "",
+			"index": "A",
 			"order": 1,
 			"formule": "",
 			"values":{
@@ -190,7 +190,7 @@
 		{
 			"label": "TOTAL ACTIF CIRCULANT",
 			"note": "",
-			"index": "",
+			"index": "B",
 			"order": 3,
 			"formule": "",
 			"values": {
@@ -259,7 +259,7 @@
 		{
 			"label": "TOTAL TRESORERIE ACTIF",
 			"note": "",
-			"index": "",
+			"index": "C",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -308,7 +308,7 @@
 			"note": "",
 			"index": "",
 			"order": 1,
-			"formule": "",
+			"formule": "A+B+C",
 			"values": {
 				"Brut": 0,
 				"Am_Pr": 0,

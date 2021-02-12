@@ -1,0 +1,192 @@
+[
+	{
+		"name": "Ressources Propres / Total Bilan (%)",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 100
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "Total endettement financier brut / RP Gearing",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 1
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "Total endettement financier brut / EBE (Leverage) - Annualisé",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "Annalisé",
+			"value": 0
+		},
+		"secondOperator": "-"
+	},
+	{
+		"name": "EBE / CA (%)",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 100
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "EBE / Frais financiers",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 1
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "RN / CA (%)",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 100
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "Couverture des frais financiers",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": null
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "EBE / Frais financier brut",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": null
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "Stocks / CA  * 365",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 365
+		},
+		"secondOperator": "*"
+	},
+	{
+		"name": "BFR / CA * 365",
+		"type" : "",
+		"stateFirst":{
+			"stateType" : "",
+			"label" : "Ressources Propres"
+		},
+		"stateSecond": {
+			"stateType": "",
+			"label": "Total Bilan"
+		},
+		"fisrtOperator": "/",
+		"stateThird": {
+			"stateType": "",
+			"label": "",
+			"value": 365
+		},
+		"secondOperator": "*"
+	}
+]

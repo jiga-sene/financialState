@@ -18,6 +18,8 @@ public class Propriete {
 	public static String BILAN_PASSIF_TITLE = "BILAN PASSIF";
 	public static String COMPTE_RESULTAT_TITLE = "COMPTE DE RESULTAT";
 	public static String FLUX_TRESORERIE_TITLE = " FLUX DE TRESORERIE";
+	
+	public static String RATIO_FILE_NAME = "ratio";
 
 	@Value("${application.title}")
 	public void setTitle(String value) {
@@ -33,14 +35,6 @@ public class Propriete {
 		years.add(Integer.toString(Year.now().getValue() - 1));
 
 		return years;
-	}
-	
-	public static Integer tryParseInt(String value) {
-		try {
-			return Integer.parseInt(value);
-		} catch (NumberFormatException e) {
-			return null;
-		}
 	}
 	
 }

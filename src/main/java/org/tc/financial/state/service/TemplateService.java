@@ -15,8 +15,8 @@ public class TemplateService {
 	@Value("${config.data.path}")
 	private String pathBase;
 
-	public File retrieveDataFileByName(@NonNull String stateCode) throws FileNotFoundException {
-		String filename = stateCode.toLowerCase().concat(".json");
+	public File retrieveDataFileByName(@NonNull String name) throws FileNotFoundException {
+		String filename = name.toLowerCase().concat(".json");
 		return ResourceUtils.getFile("classpath:" + pathBase.concat(filename));
 	}
-}
+}	

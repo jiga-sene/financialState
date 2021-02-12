@@ -102,7 +102,7 @@ public class StateService {
 					poste.setNote(String.valueOf(values.getOrDefault(iStatePG + "_" + iStatePO + "_note", "")));
 					stateDTOTMP.getResourceValues().forEach(resource -> {
 						String key = iStatePG + "_" + iStatePO + "_" + resource + "_" + stateToSave.getKey();
-						Integer valueTMP = Propriete.tryParseInt(String.valueOf(values.getOrDefault(key, "")));
+						Integer valueTMP = UtilService.tryParseInt(String.valueOf(values.getOrDefault(key, "")));
 						final int value = valueTMP == null ? 0 : valueTMP;
 						poste.getValues().put(resource, value);
 					});
