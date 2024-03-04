@@ -260,6 +260,18 @@
 				"Emplois": 0,
 				"Ressources": 0
 			}
+		},
+		{
+			"label": "Trésorerie actif N - Trésorerie passif N",
+			"note": "",
+			"index": "",
+			"order": 8,
+			"formule": "",
+			"postes": [],
+			"values": {
+				"Emplois": 0,
+				"Ressources": 0
+			}
 		}
 	]
 }

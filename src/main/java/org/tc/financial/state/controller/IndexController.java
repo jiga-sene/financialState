@@ -124,7 +124,7 @@ public class IndexController {
 		model.addAttribute("application.title", Propriete.title);
 		model.addAttribute("statesType", statesType);
 		model.addAttribute("customerID", customerID);
-		model.addAttribute("ratios", ratioService.getRatioTemplate());
+		model.addAttribute("ratios", ratioService.getAllRatios(customerID, years));
 		model.addAttribute("years", years);
 
 		return "ratios";

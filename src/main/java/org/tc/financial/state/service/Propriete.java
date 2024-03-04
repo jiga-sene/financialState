@@ -1,5 +1,6 @@
 package org.tc.financial.state.service;
 
+import java.text.DecimalFormat;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,15 @@ public class Propriete {
 		years.add(Integer.toString(Year.now().getValue() - 1));
 
 		return years;
+	}
+	
+	public static String getFloatDigitTwo(float value) {
+		
+		DecimalFormat dFormat = new DecimalFormat();
+		dFormat.setMaximumFractionDigits(2);
+		dFormat.setMinimumFractionDigits(0);
+		//dFormat.setDecimalSeparatorAlwaysShown(true);
+		return dFormat.format(value);
 	}
 	
 }

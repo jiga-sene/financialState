@@ -11,7 +11,7 @@
 		{
 			"label": "TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES",
 			"note": "",
-			"index": "",
+			"index": "A",
 			"order": 1,
 			"formule": "",
 			"values":{
@@ -143,7 +143,7 @@
 		{
 			"label": "TOTAL DETTES FINANCIERES ET RESSOURCES ASSIMILEES",
 			"note": "",
-			"index": "",
+			"index": "B",
 			"order": 2,
 			"formule": "",
 			"values" : {
@@ -167,7 +167,7 @@
 				{
 					"label": "Emprunts et dettes financières",
 					"note": "",
-					"index": "C",
+					"index": "",
 					"order": 2,
 					"signe": "",
 					"values": {
@@ -205,7 +205,7 @@
 		{
 			"label": "TOTAL PASSIF CIRCULANT",
 			"note": "",
-			"index": "",
+			"index": "C",
 			"order": 3,
 			"formule": "",
 			"values": {
@@ -265,7 +265,7 @@
 				{
 					"label": "Transports",
 					"note": "",
-					"index": "D",
+					"index": "",
 					"order": 5,
 					"signe": "",
 					"values": {
@@ -291,7 +291,7 @@
 		{
 			"label": "TOTAL TRESORERIE PASSIF",
 			"note": "",
-			"index": "",
+			"index": "D",
 			"order": 1,
 			"formule": "",
 			"values":{
@@ -327,11 +327,11 @@
 			]
 		},
 		{
-			"label": "TOTAL GENERAL",
+			"label": "TOTAL GENERAL (A+B+C+D)",
 			"note": "",
 			"index": "",
 			"order": 1,
-			"formule": "",
+			"formule": "A+B+C+D",
 			"values":{
 				"Brut": 0,
 				"Am_Pr": 0,

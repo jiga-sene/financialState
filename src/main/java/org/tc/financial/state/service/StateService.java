@@ -163,13 +163,13 @@ public class StateService {
 						stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
 								Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
 										posteGroup.getValues().get(resource)));
-						posteGroup.getPostes().forEach(poste -> {
-							if (!poste.getIndex().isEmpty() && formule.contains(poste.getIndex()))
-								stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
-										Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
-												poste.getValues().get(resource)));
-						});
 					}
+					posteGroup.getPostes().forEach(poste -> {
+						if (!poste.getIndex().isEmpty() && formule.contains(poste.getIndex()))
+							stateDTO.getPosteGroups().get(statePG).getValues().put(resource,
+									Integer.sum(stateDTO.getPosteGroups().get(statePG).getValues().get(resource),
+											poste.getValues().get(resource)));
+					});
 				});
 			});
 		});
@@ -241,7 +241,7 @@ public class StateService {
 		List<org.tc.financial.state.domain.State> states = stateRepository
 				.findAllByCustomerCodeAndYearInOrderByYearDesc(customerCode, Propriete.getThreeLastYears());
 
-		if (states == null || states.size() < 1)
+		if (states == null || states.size() <= 0)
 			return null;
 
 		final List<String> financialStates = new ArrayList<String>();

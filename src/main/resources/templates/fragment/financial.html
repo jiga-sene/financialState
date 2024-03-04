@@ -1,40 +1,39 @@
 <html lang="fr">
-	<head>
-		<meta http-equiv="content-Type" content="text/html; charset=UTF-8">
-	</head>
-	<body>
-		<tbody id="financial" th:fragment="financial">
-			<span th:each="posteGroup, statePG : ${state.posteGroups}">
-				<tr th:each="poste , statePO : ${posteGroup.postes}">
-					<td class="data" th:text="${poste.label}">TrÃ©sorerie
-						actif N-1</td>
-					<td class="text-center data" th:text="${poste.note}"
-						th:id="${statePG.index+'_'+statePO.index+'_note'}"
-						contenteditable="false"><input type="hidden"
-						th:field="${poste.label + '_note'}"
-						th:name="${statePG.index+'_'+statePO.index+'_'+'note'}" /></td>
-					<span th:each="year, stat : ${years}">
-						<td class="text-center data"
-						th:each="resource, indice : ${state.resourceValues}"
-						th:id="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
-						th:text="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}"
-						contenteditable="false"><input type="hidden"
-							th:name="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
-							th:field="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}" /></td>
-					</span>
-				</tr>
-				<tr class="text-light"
-					th:classappend="${posteGroup?.postes != null && #lists.size(posteGroup?.postes) > 0 ? 'bg-info' : 'bg-secondary'}">
-					<td class="dataH" th:text="${posteGroup.label}">TrÃ©sorerie
-						au 1er janvier</td>
-					<td class="text-center dataH" th:text="${posteGroup.index}">A</td>
-					<span th:each="year, stat : ${years}">
-						<td class="dataH text-center"
-						th:each="resource, indice : ${state.resourceValues}"
-						th:text="${posteGroup?.values['__${resource+'_'+year}__']}"></td>
-					</span>
-				</tr>
-			</span>
-		</tbody>
-	</body>
+<head>
+<meta http-equiv="content-Type" content="text/html">
+</head>
+<body>
+	<tbody id="financial" th:fragment="financial">
+		<span th:each="posteGroup, statePG : ${state.posteGroups}">
+			<tr th:each="poste , statePO : ${posteGroup.postes}">
+				<td class="data" th:text="${poste.label}">Trésorerie actif N-1</td>
+				<td class="text-center data" th:text="${poste.note}"
+					th:id="${statePG.index+'_'+statePO.index+'_note'}"
+					contenteditable="false"><input type="hidden"
+					th:field="${poste.label + '_note'}"
+					th:name="${statePG.index+'_'+statePO.index+'_'+'note'}" /></td>
+				<span th:each="year, stat : ${years}">
+					<td class="text-center data"
+					th:each="resource, indice : ${state.resourceValues}"
+					th:id="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
+					th:text="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}"
+					contenteditable="false"><input type="hidden"
+						th:name="${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}"
+						th:field="${poste.values['__${statePG.index+'_'+statePO.index+'_'+resource+'_'+year}__']}" /></td>
+				</span>
+			</tr>
+			<tr class="text-light"
+				th:classappend="${posteGroup?.postes == null || #lists.size(posteGroup?.postes) == 0 || !#strings.isEmpty(posteGroup?.formule) ? 'bg-secondary' : 'bg-info'}">
+				<td class="dataH" th:text="${posteGroup.label}">Trésorerie au
+					1er janvier</td>
+				<td class="text-center dataH" th:text="${posteGroup.index}">A</td>
+				<span th:each="year, stat : ${years}">
+					<td class="dataH text-center" th:id="${resource+'_'+year}"
+					th:each="resource, indice : ${state.resourceValues}"
+					th:text="${posteGroup?.values['__${resource+'_'+year}__']}"></td>
+				</span>
+			</tr>
+		</span>
+	</tbody>
+</body>
 </html>

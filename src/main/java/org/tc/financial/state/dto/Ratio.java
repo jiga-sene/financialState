@@ -1,6 +1,7 @@
 package org.tc.financial.state.dto;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
 
 import lombok.AllArgsConstructor;
@@ -26,5 +27,11 @@ public class Ratio implements Serializable {
 	private String firstOperator;
 	private String secondOperator;
 
-	private Map<String, Integer> values;
+	private Map<String, String> values;
+
+	public Map<String, String> getValues() {
+		if (values == null)
+			values = new HashMap<>();
+		return values;
+	}
 }

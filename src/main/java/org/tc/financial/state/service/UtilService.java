@@ -8,6 +8,9 @@ public class UtilService {
 	public static float calcul(float valueOne, float valueTwo, String operator) {
 
 		float result = 0;
+		if(operator == null)
+			return result;
+		
 		switch (operator) {
 		case "+":
 			result = valueOne + valueTwo;

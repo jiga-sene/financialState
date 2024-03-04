@@ -1,18 +1,18 @@
-[
+	[
 	{
-		"name": "Ressources Propres / Total Bilan (%)",
+		"name": "RESSOURCES PROPRES / TOTAL BILAN (%)",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "BILPAS",
+			"label" : "TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "BILPAS",
+			"label": "TOTAL GENERAL (A+B+C+D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 100
 		},
@@ -22,16 +22,16 @@
 		"name": "Total endettement financier brut / RP Gearing",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "BILPAS",
+			"label" : "TOTAL DETTES FINANCIERES ET RESSOURCES ASSIMILEES"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "BILPAS",
+			"label": "TOTAL GENERAL (A+B+C+D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 1
 		},
@@ -41,16 +41,16 @@
 		"name": "Total endettement financier brut / EBE (Leverage) - Annualisé",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "BILPAS",
+			"label" : "TOTAL DETTES FINANCIERES ET RESSOURCES ASSIMILEES"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "EXCEDENT BRUT D'EXPLOITATION"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "Annalisé",
 			"value": 0
 		},
@@ -60,16 +60,16 @@
 		"name": "EBE / CA (%)",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "COMPTRES",
+			"label" : "EXCEDENT BRUT D'EXPLOITATION"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 100
 		},
@@ -79,16 +79,16 @@
 		"name": "EBE / Frais financiers",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "COMPTRES",
+			"label" : "EXCEDENT BRUT D'EXPLOITATION"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "Frais financiers et charges assimilées"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 1
 		},
@@ -98,37 +98,18 @@
 		"name": "RN / CA (%)",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "COMPTRES",
+			"label" : "RESULTAT NET"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 100
-		},
-		"secondOperator": "*"
-	},
-	{
-		"name": "Couverture des frais financiers",
-		"type" : "",
-		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
-		},
-		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
-		},
-		"fisrtOperator": "/",
-		"stateThird": {
-			"stateType": "",
-			"label": "",
-			"value": null
 		},
 		"secondOperator": "*"
 	},
@@ -136,18 +117,18 @@
 		"name": "EBE / Frais financier brut",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "COMPTRES",
+			"label" : "EXCEDENT BRUT D'EXPLOITATION"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "Frais financiers et charges assimilées"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
-			"value": null
+			"value": 1
 		},
 		"secondOperator": "*"
 	},
@@ -155,16 +136,16 @@
 		"name": "Stocks / CA  * 365",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "BILACT",
+			"label" : "STOCK ET ENCOURS"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 365
 		},
@@ -174,16 +155,16 @@
 		"name": "BFR / CA * 365",
 		"type" : "",
 		"stateFirst":{
-			"stateType" : "",
-			"label" : "Ressources Propres"
+			"stateType" : "BILPAS",
+			"label" : "TOTAL CAPITAUX PROPRES ET RESSOURCES ASSIMILEES"
 		},
 		"stateSecond": {
-			"stateType": "",
-			"label": "Total Bilan"
+			"stateType" : "COMPTRES",
+			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)"
 		},
-		"fisrtOperator": "/",
+		"firstOperator": "/",
 		"stateThird": {
-			"stateType": "",
+			"stateType" : "",
 			"label": "",
 			"value": 365
 		},

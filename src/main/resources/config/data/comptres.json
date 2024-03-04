@@ -9,7 +9,7 @@
 		{
 			"label": "MARGE BRUTE",
 			"note": "",
-			"index": "",
+			"index": "A",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -19,7 +19,7 @@
 				{
 					"label": "Ventes de marchandises",
 					"note": "",
-					"index": "A",
+					"index": "",
 					"order": 1,
 					"signe": "+",
 					"values": {
@@ -49,11 +49,11 @@
 			]
 		},
 		{
-			"label": "CHIFFRES D'AFFAIRES (A + B + C + D)",
+			"label": "CHIFFRES D'AFFAIRES",
 			"note": "",
-			"index": "",
+			"index": "B",
 			"order": 2,
-			"formule": "A + B + C + D",
+			"formule": "",
 			"values": {
 				"Net": 0
 			},
@@ -61,7 +61,7 @@
 				{
 					"label": "Ventes de produits fabriqués",
 					"note": "",
-					"index": "B",
+					"index": "",
 					"order": 1,
 					"signe": "+",
 					"values": {
@@ -71,7 +71,7 @@
 				{
 					"label": "Travaux, services vendus",
 					"note": "",
-					"index": "C",
+					"index": "",
 					"order": 2,
 					"signe": "+",
 					"values": {
@@ -91,7 +91,7 @@
 				{
 					"label": "Production immobilisée",
 					"note": "",
-					"index": "C",
+					"index": "",
 					"order": 4,
 					"signe": "+",
 					"values": {
@@ -101,7 +101,7 @@
 				{
 					"label": "Produits accessoires",
 					"note": "",
-					"index": "D",
+					"index": "",
 					"order": 5,
 					"signe": "+",
 					"values": {
@@ -111,9 +111,9 @@
 				{
 					"label": "Subventions d'exploitation",
 					"note": "",
-					"index": "",
+					"index":"",
 					"order": 6,
-					"signe": "+",
+					"signe":"+",
 					"values": {
 						"Net": 0
 					}
@@ -133,7 +133,7 @@
 		{
 			"label": "VALEUR AJOUTEE",
 			"note": "",
-			"index": "",
+			"index": "C",
 			"order": 3,
 			"formule": "",
 			"values": {
@@ -183,7 +183,7 @@
 				{
 					"label": "Transports",
 					"note": "",
-					"index": "D",
+					"index": "",
 					"order": 5,
 					"signe": "-",
 					"values": {
@@ -225,7 +225,7 @@
 		{
 			"label": "EXCEDENT BRUT D'EXPLOITATION",
 			"note": "",
-			"index": "",
+			"index": "D",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -247,7 +247,7 @@
 		{
 			"label": "RESULTAT D'EXPLOITATION",
 			"note": "",
-			"index": "",
+			"index": "E",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -289,7 +289,7 @@
 		{
 			"label": "RESULTAT FINANCIER",
 			"note": "",
-			"index": "",
+			"index": "F",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -321,7 +321,7 @@
 		{
 			"label": "RESULTAT AVANT PRELEVEMENT",
 			"note": "",
-			"index": "",
+			"index": "G",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -332,7 +332,7 @@
 		{
 			"label": "RESULTAT NET",
 			"note": "",
-			"index": "",
+			"index": "H",
 			"order": 1,
 			"formule": "",
 			"values": {

@@ -33,6 +33,7 @@
 		<div class="row">
 			<nav th:replace="fragment/sidebar :: sidebar(${customerID})"></nav>
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+			<span id="stateTypeCode" class="d-none" th:text="${stateType?.code}"></span>
 				<form
 					th:action="@{/state/__${stateType?.code}__/__${stateType?.uuid}__}"
 					method="post" th:object="${state}" id="frm_state">
@@ -63,7 +64,7 @@
 								<tr>
 									<th class="dataH" rowspan="2"></th>
 									<th class="dataH" rowspan="2">Note</th>
-									<th class="dataH" th:colspan="${state.resources}"
+									<th class="dataH" id="columnResource" th:colspan="${state.resources}"
 										th:each="year : ${years}"
 										th:text="${'Exercice au 31/12/' + year}">Exercice au
 										31/12/N</th>
@@ -72,7 +73,7 @@
 									<span th:each="year, stat : ${years}">
 										<th class="dataH text-center"
 										th:each="resource : ${state?.resourceValues}"
-										th:text="${resource}">Emplois</th>
+										th:text="${resource}" th:id="${resource+'_'+year}">Emplois</th>
 									</span>
 								</tr>
 							</thead>

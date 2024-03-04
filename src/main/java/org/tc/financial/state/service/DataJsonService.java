@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import org.tc.financial.state.dto.State;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
 
 @Service
 public class DataJsonService {
@@ -30,8 +32,8 @@ public class DataJsonService {
 	public State retriveDataToPoste(File fileData) {
 		State state;
 		try {
-			// state = gson.fromJson(new FileReader(fileData), State.class);
-			state = gson.fromJson(new InputStreamReader(new FileInputStream(fileData), Charset.forName("windows-1252")),
+			// state = gson.fromJson(new FileReader(fileData), State.class); // Charset.forName("Windows-1252")
+			state = gson.fromJson(new InputStreamReader(new FileInputStream(fileData), StandardCharsets.UTF_8),
 					State.class);
 			return state;
 		} catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
@@ -52,8 +54,9 @@ public class DataJsonService {
 		List<Ratio> ratios;
 		try {
 			ratios = (ArrayList<Ratio>) gson.fromJson(
-					new InputStreamReader(new FileInputStream(ratioInFile), Charset.forName("windows-1252")),
-					ArrayList.class);
+					new InputStreamReader(new FileInputStream(ratioInFile), Charset.forName("utf-8")),
+					new TypeToken<List<Ratio>>() {
+					}.getType());
 			return ratios;
 		} catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
 			e.printStackTrace();

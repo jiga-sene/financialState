@@ -9,17 +9,28 @@
 	],
 	"posteGroups": [
 		{
-			"label": "IMMOBILISATIONS INCORPORELLES",
+			"label": "TOTAL ACTIF IMMOBILISE",
 			"note": "",
 			"index": "A",
 			"order": 1,
 			"formule": "",
-			"values": {
+			"values":{
 				"Brut": 0,
 				"Am_Pr": 0,
 				"Net": 0
 			},
 			"postes": [
+				{
+					"label": "IMMOBILISATIONS INCORPORELLES",
+					"note": "",
+					"index": "",
+					"order": 1,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
 				{
 					"label": "Brevets, Licences",
 					"note": "",
@@ -41,56 +52,9 @@
 						"Am_Pr": 0,
 						"Net": 0
 					}
-				}
-			]
-		},
-		{
-			"label": "IMMOBILISATIONS CORPORELLES",
-			"note": "",
-			"index": "B",
-			"order": 2,
-			"formule": "",
-			"values": {
-				"Brut": 0,
-				"Am_Pr": 0,
-				"Net": 0
-			},
-			"postes": [
-				{
-					"label": "Terrains",
-					"note": "",
-					"index": "",
-					"order": 1,
-					"values": {
-						"Brut": 0,
-						"Am_Pr": 0,
-						"Net": 0
-					}
 				},
 				{
-					"label": "Bâtiments",
-					"note": "",
-					"index": "",
-					"order": 2,
-					"values": {
-						"Brut": 0,
-						"Am_Pr": 0,
-						"Net": 0
-					}
-				},
-				{
-					"label": "Installations et aménagements",
-					"note": "",
-					"index": "",
-					"order": 3,
-					"values": {
-						"Brut": 0,
-						"Am_Pr": 0,
-						"Net": 0
-					}
-				},
-				{
-					"label": "Matériel et Outillage",
+					"label": "IMMOBILISATIONS CORPORELLES",
 					"note": "",
 					"index": "",
 					"order": 4,
@@ -101,7 +65,7 @@
 					}
 				},
 				{
-					"label": "Matériel, Mobilier de bureau",
+					"label": "Terrains",
 					"note": "",
 					"index": "",
 					"order": 5,
@@ -112,7 +76,7 @@
 					}
 				},
 				{
-					"label": "Matériel informatique",
+					"label": "Bâtiments",
 					"note": "",
 					"index": "",
 					"order": 6,
@@ -123,7 +87,7 @@
 					}
 				},
 				{
-					"label": "Immobilisations corporelles en cours",
+					"label": "Installations et aménagements",
 					"note": "",
 					"index": "",
 					"order": 7,
@@ -134,7 +98,7 @@
 					}
 				},
 				{
-					"label": "Créances et acomptes",
+					"label": "Matériel et Outillage",
 					"note": "",
 					"index": "",
 					"order": 8,
@@ -143,26 +107,67 @@
 						"Am_Pr": 0,
 						"Net": 0
 					}
-				}
-			]
-		},
-		{
-			"label": "IMMOBILISATIONS FINANCIERES",
-			"note": "",
-			"index": "C",
-			"order": 3,
-			"formule": "",
-			"values": {
-				"Brut": 0,
-				"Am_Pr": 0,
-				"Net": 0
-			},
-			"postes": [
+				},
+				{
+					"label": "Matériel, Mobilier de bureau",
+					"note": "",
+					"index": "",
+					"order": 9,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "Matériel informatique",
+					"note": "",
+					"index": "",
+					"order": 10,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "Immobilisations corporelles en cours",
+					"note": "",
+					"index": "",
+					"order": 11,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "Créances et acomptes",
+					"note": "",
+					"index": "",
+					"order": 12,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "IMMOBILISATIONS FINANCIERES",
+					"note": "",
+					"index": "",
+					"order": 13,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
 				{
 					"label": "Titre de participations",
 					"note": "",
 					"index": "",
-					"order": 1,
+					"order": 14,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -173,46 +178,7 @@
 					"label": "Autres Immobilisations Financières",
 					"note": "",
 					"index": "",
-					"order": 2,
-					"values": {
-						"Brut": 0,
-						"Am_Pr": 0,
-						"Net": 0
-					}
-				}
-			]
-		},
-		{
-			"label": "TOTAL ACTIF IMMOBILISE",
-			"note": "",
-			"index": "X",
-			"order": 1,
-			"formule": "A+B+C",
-			"values": {
-				"Brut": 0,
-				"Am_Pr": 0,
-				"Net": 0
-			},
-			"postes": [
-			]
-		},
-		{
-			"label": "STOCK ET ENCOURS",
-			"note": "",
-			"index": "D",
-			"order": 2,
-			"formule": "",
-			"values": {
-				"Brut": 0,
-				"Am_Pr": 0,
-				"Net": 0
-			},
-			"postes": [
-				{
-					"label": "Stock & Encours",
-					"note": "",
-					"index": "",
-					"order": 1,
+					"order": 15,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -224,9 +190,9 @@
 		{
 			"label": "TOTAL ACTIF CIRCULANT",
 			"note": "",
-			"index": "Y",
+			"index": "B",
 			"order": 3,
-			"formule": "D+E+F+G+H",
+			"formule": "",
 			"values": {
 				"Brut": 0,
 				"Am_Pr": 0,
@@ -234,10 +200,21 @@
 			},
 			"postes": [
 				{
-					"label": "Créances & Emplois assmilés",
+					"label": "STOCK ET ENCOURS",
 					"note": "",
-					"index": "E",
+					"index": "",
 					"order": 1,
+					"values": {
+						"Brut": 0,
+						"Am_Pr": 0,
+						"Net": 0
+					}
+				},
+				{
+					"label": "CREANCES ET EMPLOIS ASSIMILES",
+					"note": "",
+					"index": "",
+					"order": 2,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -247,8 +224,8 @@
 				{
 					"label": "Fournisseurs avances versées",
 					"note": "",
-					"index": "F",
-					"order": 2,
+					"index": "",
+					"order": 3,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -258,8 +235,8 @@
 				{
 					"label": "Clients",
 					"note": "",
-					"index": "G",
-					"order": 3,
+					"index": "",
+					"order": 4,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -269,8 +246,8 @@
 				{
 					"label": "Autres Créances",
 					"note": "",
-					"index": "H",
-					"order": 4,
+					"index": "",
+					"order": 5,
 					"values": {
 						"Brut": 0,
 						"Am_Pr": 0,
@@ -282,7 +259,7 @@
 		{
 			"label": "TOTAL TRESORERIE ACTIF",
 			"note": "",
-			"index": "Z",
+			"index": "C",
 			"order": 1,
 			"formule": "",
 			"values": {
@@ -331,13 +308,13 @@
 			"note": "",
 			"index": "",
 			"order": 1,
-			"formule": "X+Y+Z",
+			"formule": "A+B+C",
 			"values": {
 				"Brut": 0,
 				"Am_Pr": 0,
 				"Net": 0
 			},
-			"postes": []
+			"postes":[]
 		}
 	]
 }

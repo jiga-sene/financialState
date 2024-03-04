@@ -17,4 +17,7 @@ public interface StateRepository extends CrudRepository<State, UUID> {
 			List<String> years);
 
 	List<State> findAllByCustomerCodeAndYearInOrderByYearDesc(String customerCode, List<String> years);
+
+	List<State> findAllByCustomerCodeAndStateTypeCodeInAndYearInOrderByYearDescStateTypeCodeAsc(String customerCode,
+			List<String> statesType, List<String> years);
 }

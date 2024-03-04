@@ -51,7 +51,13 @@
 						<div class="row mt-2">
 							<div class="col-4 lead text-right" th:text="${ratio.name}">Ressources
 								Propres / Total Bilan (%)</div>
-							<div class="col-8"></div>
+							<div class="col-8 align-middle">
+								<div class="row ml-4 align-middle">
+									<div class="col-4 align-middle" th:each="year : ${years}">
+										<span th:text="${ratio.values['__${year}__']}"> </span>
+									</div>
+								</div>
+							</div>
 						</div>
 						<hr />
 					</div>
